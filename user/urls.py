@@ -6,5 +6,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.home, name='home-page')
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 
+    path('',views.home, name='home-page'),
+    path('register/',views.register,name='register-page'),
+    path('quiz/',views.quizoption , name='quizoption')
+] 

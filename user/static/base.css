@@ -1,10 +1,10 @@
-body{
-    background-color: bisque;
+ .body{
+    background-color: lightskyblue;
 }
 
 .box{
     background-color: white;
-    height:500px;
+    height:530px;
     width:900px;
     margin-left: 300px;
     margin-top: 0px;
@@ -29,11 +29,15 @@ body{
     margin-left: 400px;
 }
 
+.buttons{
+   
+}
+
     
 
 
 loginform{
-    margin-top: 30px;
+    margin-top: 80px;
 }
 .signstudent{
     font-style: bold;

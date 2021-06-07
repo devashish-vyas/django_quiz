@@ -1,3 +1,6 @@
+{% load static %}
+{%load crispy_forms_tags%}
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,46 +15,31 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href={% static 'base.css' %} />
   </head>
-  <body>
+  <body class="body">
     <div class="name">
       <header class="logo">Django Quiz</header>
     </div>
-
+    
     <div class="box">
-      <div class="container-md loginform">
-       <h4 class="signstudent">Sign Up </h4>
-         <form class="row g-3">
-  <div class="col-md-12">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4">
-  </div>
-  <div class="col-md-12">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4">
-  </div>
-  
-  <div class="col-12">
-    <label for="inputAddress2" class="form-label">Re-Enter Password</label>
-    <input type="text" class="form-control" id="inputAddress2" >
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
-  </div>
- 
-  <div class="col-md-6">
-    <label for="inputZip" class="form-label">State</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
-   
-  
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
-  </div>
-</form>
-      </div>
+    <div class="container">
+      <div class='content-section'>
+       <form method="POST">
+          {% csrf_token%}
+          <fieldset class="form-group">
+             <legend class="border-bottom mb-4"> Join Today </legend>
+             {{form|crispy}}
+          </fieldset>
+          <div class="form-group">
+             <button class="btn btn-online-info btn btn-outline-success" type="submit">Sign Up</button>
+          </div>
+        </form>  
+        
+        </div>
     </div>
+    </div>
+    </div>
+    </form>
   </body>
 </html>
